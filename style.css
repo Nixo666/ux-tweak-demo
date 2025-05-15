@@ -1,0 +1,188 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+ 
+body{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    color: black;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+body.dark-mode{
+    color: white;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('bg1.gif');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(2) contrast(1) blur(20px);
+    z-index: -1;
+}
+
+body.dark-mode::before{
+    background-image: url('bg2.gif');
+}
+
+body, body::before {
+    transition: background-image 0.5s ease, color 0.3s ease;
+}
+
+nav{
+    background-color: rgba(0, 141, 197, 0.753);
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    transition: background-image 0.5s ease, color 0.3s ease;
+}
+
+body.dark-mode nav{
+    background: rgba(0, 35, 100, 0.651);
+}
+
+nav ul{
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li{
+    display: inline;
+    margin: 40px;
+}
+
+nav ul li a{
+    font-family: "Delius" , sans-serif;
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+body.dark-mode nav ul li a {
+    color: white;
+}
+
+nav ul li a:hover{
+    color: rgb(83, 5, 102);
+}
+
+body.dark-mode nav{
+    background: rgba(0, 35, 100, 0.651);
+}
+
+nav ul{
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li{
+    display: inline;
+    margin: 40px;
+}
+
+nav ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+body.dark-mode nav ul li a {
+    color: white;
+}
+
+nav ul li a:hover{
+    color: rgb(83, 5, 102);
+}
+
+body.dark-mode nav{
+    background: rgba(0, 35, 100, 0.651);
+}
+
+nav ul{
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li{
+    display: inline;
+    margin: 40px;
+}
+
+nav ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+body.dark-mode nav ul li a {
+    color: white;
+}
+
+nav ul li a:hover{
+    color: rgb(83, 5, 102);
+}
+
+.head{
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    overflow: auto;
+}
+
+.head h1{
+    font-size: 100px;
+    font-family: "Pacifico", sans-serif;
+    text-shadow: 2px 2px 5px rgb(255, 255, 255);
+}
+
+.head p{
+    font-size: 17px;
+    line-height: 1px;
+    font-family: "Delius" , sans-serif;
+}
+
+body.dark-mode .head h1{
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+footer {
+    background: rgba(106, 162, 207, 0.466);
+    padding: 60px;
+    margin-top: 14px;
+}
+
+body.dark-mode footer{
+    background: rgba(0, 35, 100, 0.651);
+}
+
+@media (max-width: 500px){
+
+    nav ul li{
+        margin: 10px;
+    }
+
+    .head h1{
+        font-size: 70px;
+    }
+}
